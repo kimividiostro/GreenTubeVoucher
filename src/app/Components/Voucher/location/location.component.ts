@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { VoucherService } from 'src/app/Services/voucher.service';
+import { Location } from '../Models/Location';
 
 @Component({
   selector: 'app-location',
