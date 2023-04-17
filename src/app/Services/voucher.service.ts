@@ -10,12 +10,11 @@ import { LocationsDTO } from '../Components/Voucher/Models/Locations-dto';
 })
 export class VoucherService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getVoucherVenues(): Observable<Location[]> {
     return this.http.get<LocationsDTO>(
-      `${baseApiUrl}/b/631aee46a1610e63862444c0`,
-      {headers: {'X-Master-Key': xMasterKey}}).pipe(
+      `${baseApiUrl}/b/631aee46a1610e63862444c0`).pipe(
         map(response => response.record.venues)
       );
   }

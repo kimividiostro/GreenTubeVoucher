@@ -12,6 +12,7 @@ import { VoucherPurchaseComponent } from './Components/Voucher/voucher-purchase/
 import { HomeComponent } from './Components/Home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LocationComponent } from './Components/Voucher/location/location.component';
+import { httpInterceptorProviders } from './interceptors';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { LocationComponent } from './Components/Voucher/location/location.compon
     MatTableModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ httpInterceptorProviders ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
