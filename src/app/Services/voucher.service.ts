@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
-import { baseApiUrl, xMasterKey } from 'src/environment';
+import { Observable, map, of, tap } from 'rxjs';
+import { vendorsUrl } from 'src/environment';
 import { Location } from '../Components/Voucher/Models/Location';
 import { LocationsDTO } from '../Components/Voucher/Models/Locations-dto';
 
@@ -10,12 +10,19 @@ import { LocationsDTO } from '../Components/Voucher/Models/Locations-dto';
 })
 export class VoucherService {
 
+  private voucherVendors = new Map<number, Location[]>();
+
   constructor(private http: HttpClient) {}
 
-  getVoucherVenues(): Observable<Location[]> {
-    return this.http.get<LocationsDTO>(
-      `${baseApiUrl}/b/631aee46a1610e63862444c0`).pipe(
-        map(response => response.record.venues)
-      );
+  getVoucherVenues(voucherValue: number): Observable<Location[]> {
+    const voucherVendors = this.voucherVendors.get(voucherValue);
+    if(voucherVendors) 
+      return of(voucherVendors);
+
+    return this.http.get<LocationsDTO>(vendorsUrl).pipe(
+      tap(res => this.voucherVendors.set(voucherValue, res.record.venues)),
+      map(res => res.record.venues)
+    );
   }
+
 }

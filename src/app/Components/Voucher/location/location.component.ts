@@ -15,6 +15,6 @@ export class LocationComponent {
   constructor(private voucherService: VoucherService) {}
 
   ngOnInit(): void {
-    this.locations$ = this.voucherService.getVoucherVenues();
+    this.locations$ = this.voucherService.getVoucherVenues(50);
   }
 }
