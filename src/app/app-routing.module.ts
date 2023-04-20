@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { VoucherPurchaseComponent } from './Components/Voucher/voucher-purchase/voucher-purchase.component';
-import { HomeComponent } from './Components/Home/home.component';
+import { VoucherPurchaseComponent } from './Components/voucher/voucher-purchase/voucher-purchase.component';
+import { HomeComponent } from './Components/home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},

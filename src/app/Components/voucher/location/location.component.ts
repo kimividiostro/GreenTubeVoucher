@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VoucherService } from 'src/app/Services/voucher.service';
+import { VoucherService } from 'src/app/services/voucher.service';
 
 @Component({
   selector: 'app-location',

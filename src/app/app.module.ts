@@ -8,10 +8,10 @@ import { MatTableModule } from '@angular/material/table'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VoucherPurchaseComponent } from './Components/Voucher/voucher-purchase/voucher-purchase.component';
-import { HomeComponent } from './Components/Home/home.component';
+import { VoucherPurchaseComponent } from './Components/voucher/voucher-purchase/voucher-purchase.component';
+import { HomeComponent } from './Components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LocationComponent } from './Components/Voucher/location/location.component';
+import { LocationComponent } from './Components/voucher/location/location.component';
 import { httpInterceptorProviders } from './interceptors';
 
 @NgModule({
