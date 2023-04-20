@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map, of, tap } from 'rxjs';
 import { vendorsUrl } from 'src/environment';
-import { Location } from '../Components/voucher/models/location';
-import { LocationsDTO } from '../Components/voucher/models/DTO/locations-dto';
+import { Location } from '../components/voucher/models/location';
+import { LocationsDTO } from '../components/voucher/models/DTO/locations-dto';
 
 @Injectable({
   providedIn: 'root'
