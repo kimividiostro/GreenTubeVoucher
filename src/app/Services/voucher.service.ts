@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, map, of, tap } from 'rxjs';
 import { vendorsUrl } from 'src/environment';
 import { Location } from '../Components/Voucher/Models/Location';
-import { LocationsDTO } from '../Components/Voucher/Models/Locations-dto';
+import { LocationsDTO } from '../Components/Voucher/Models/DTO/Locations-dto';
 
 @Injectable({
   providedIn: 'root'
@@ -25,4 +25,5 @@ export class VoucherService {
     );
   }
 
+  
 }
